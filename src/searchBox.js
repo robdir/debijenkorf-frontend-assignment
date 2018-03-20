@@ -19,6 +19,12 @@ class SearchBox extends PureComponent {
         })
     }
 
+    removeInput(){
+        this.setState({
+            searchTerm: ""
+        })
+    }
+
     componentDidMount(){
         this.nameInput.focus();
     }
