@@ -8,21 +8,27 @@ class SearchBox extends PureComponent {
 
         this.state = {
             searchTerm: '',
-            productData: []
+            productData: [],
+            searchMatch: []
         };
 
         this.onInputChange = this.onInputChange.bind(this)
     }
 
     onInputChange(event) {
+        let productMatch = this.state.productData.filter(product =>
+            product.searchterm.includes(event.target.value.toLowerCase()));
+
         this.setState({
-            searchTerm: event.target.value
+            searchTerm: event.target.value,
+            searchMatch: productMatch
         })
     }
 
     removeInput(){
         this.setState({
-            searchTerm: ""
+            searchTerm: "",
+            searchMatch: []
         })
         this.searchInput.focus();
     }
@@ -52,6 +58,11 @@ class SearchBox extends PureComponent {
                     onChange={this.onInputChange}
                     value={this.state.searchTerm}
                     />
+                        {this.state.searchMatch.length > 2 ?
+                        (<div className="suggestions">
+                           {this.state.searchMatch.map(i => i.searchterm)}
+                        </div>): null
+                        }
 
                     {this.state.searchTerm !== "" ?
                      (<img className="control"

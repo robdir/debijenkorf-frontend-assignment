@@ -32,5 +32,12 @@
     height: 60px;
     position: absolute;
     right: 20px;
-    bottom: -8px;
+    top: -8px;
+}
+
+.searchcontainer .suggestions  {
+    width: 377px;
+    height: 45px;
+    background-color: whitesmoke;
+    padding: 4px;
 }
