@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react'
+import axios from 'axios'
 import './styles/searchbox.css'
 
 class SearchBox extends PureComponent {
@@ -28,6 +29,16 @@ class SearchBox extends PureComponent {
 
     componentDidMount(){
         this.searchInput.focus();
+
+        const _this = this;
+        this.serverRequest =
+            axios
+            .get("http://localhost:3000/search\?q\=default")
+                .then(function (result) {
+                    _this.setState({
+                        productData: result.data.suggestions
+                    })
+                });
     }
 
     render() {
