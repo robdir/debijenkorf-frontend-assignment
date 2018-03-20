@@ -6,7 +6,8 @@ class SearchBox extends PureComponent {
         super(props);
 
         this.state = {
-            searchTerm: ''
+            searchTerm: '',
+            productData: []
         };
 
         this.onInputChange = this.onInputChange.bind(this)
