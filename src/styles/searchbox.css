@@ -1,0 +1,28 @@
+.searchcontainer {
+    height: 50px;
+    width: 380px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.search {
+    position: relative;
+}
+
+.search .input {
+    width: 377px;
+    height: 45px;
+    background-color: whitesmoke;
+    border: 1px solid grey;
+    box-shadow: 0 0 3px grey;
+    box-sizing: border-box;
+    padding: 4px;
+}
+
+.searchcontainer .glass {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 6px;
+    top: 8px;
+}
