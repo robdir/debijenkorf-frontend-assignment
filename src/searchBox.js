@@ -10,7 +10,6 @@ class SearchBox extends PureComponent {
         };
 
         this.onInputChange = this.onInputChange.bind(this)
-
     }
 
     onInputChange(event) {
@@ -23,10 +22,11 @@ class SearchBox extends PureComponent {
         this.setState({
             searchTerm: ""
         })
+        this.searchInput.focus();
     }
 
     componentDidMount(){
-        this.nameInput.focus();
+        this.searchInput.focus();
     }
 
     render() {
@@ -36,7 +36,7 @@ class SearchBox extends PureComponent {
                     <input className="input"
                     type="text"
                     placeholder="Zoeken"
-                    ref={(input) => {this.nameInput = input}}
+                    ref={(input) => {this.searchInput = input}}
                     onChange={this.onInputChange}
                     value={this.state.searchTerm}
                     />

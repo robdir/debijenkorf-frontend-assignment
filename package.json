@@ -12,8 +12,10 @@
     "concurrently": "^3.5.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-15": "^1.0.5",
+    "jest-enzyme": "^6.0.0",
+    "react-addons-test-utils": "^15.6.2",
     "react-scripts": "1.0.13",
-    "react-test-renderer": "15.4.2"
+    "react-test-renderer": "15.6.1"
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"canned -p 5000 ./api/\"",
